@@ -7,9 +7,10 @@
 # - Versão 1.0 - 2024-06-13 - bash shell script
 # - Autor: Prof. Luiz Augusto Rodrigues
 # - Notas: 
-# - - Antes de executar o script, mude o proprietário do arquivo para o seu usuário.
-# - - Ex.: sudo chown $USER reqsv1.sh, onde $USER seria o seu usuário.
-
+# - - Antes de executar o script, verifique se vc é o proprietário do arquivo.
+# - - Se não for, precisa mudar a propriedade para o seu usuário.
+# - - Você pode fazer isso usando o comando a seguir:
+# - - sudo chown $USER reqsv1.sh, onde $USER seria o seu usuário.
 
 # init
 function pause(){
@@ -33,9 +34,11 @@ function apresentacao(){
 	header
 	echo "."
 	echo -e "\033[0;41m <<< ATENÇÃO >>>\033[0;0m"
-	echo -e "\033[0;41m <<< Antes de executar o script, mude o proprietário do arquivo para o seu usuário.\033[0;0m"
-	echo -e "\033[0;41m <<< Se não fizer a troca, o script vai baixar arquivos no lugar errado.\033[0;0m"
-	echo -e "\033[0;41m <<< Ex.: sudo chown USER reqsv1.sh, onde USER seria o login do seu usuário.\033[0;0m"
+	echo -e "\033[0;41m <<< Antes de executar o script, verifique se vc é o proprietário do arquivo.\033[0;0m"
+	echo -e "\033[0;41m <<< Se não for, precisa mudar a propriedade para o seu usuário.\033[0;0m"
+	echo -e "\033[0;41m <<< Você pode fazer isso usando o comando a seguir:\033[0;0m"
+	echo -e "\033[0;41m <<< sudo chown $USER reqsv1.sh\033[0;0m"
+	echo -e "\033[0;41m <<< onde $USER seria o seu usuário.\033[0;0m"
 	echo "."
 	echo "----------------------------------------"
 	echo "."

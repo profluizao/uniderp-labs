@@ -10,12 +10,12 @@ Os scritps aqui servem para as distribuições da família Debian, como por exem
 
 Temos dois arquivos principais:
 - posinstallv1.sh - script de pós-instalação para máquinas virtuais.
-- reqsv1.sh - script de pós-instalação para máquinas reais (pode ser utilizado em VMs também).
+- requisitos.sh - script de pós-instalação para máquinas reais (pode ser utilizado em VMs também).
 
 Em ambos os casos, devemos baixar o arquivo, e executar um comando para dar permissão de execução do script, como segue:
 chmod +x posinstallv1.sh
 ou
-chmod +x reqsv1.sh
+chmod +x requisitos.sh
 
 Sempre que possível, vou atualizar estes scripts, adicionando novos comandos e configurações.
 
