@@ -1,21 +1,23 @@
 # uniderp-labs
 Repositório de códigos para a Equipe do Laboratório de TI, UNIDERP.
 
+## Objetivo
 Esta é a pasta de scripts de pós instalação do Linux.
+
 Os scritps aqui servem para as distribuições da família Debian, como por exemplo:
-- Debian 12
-- Ubuntu 22.04
-- Pop OS 22.04
-- Zorin OS 17
+* Debian 12
+* Ubuntu 22.04
+* Pop OS 22.04
+* Zorin OS 17
 
-Temos dois arquivos principais:
-- posinstallv1.sh - script de pós-instalação para máquinas virtuais.
-- requisitos.sh - script de pós-instalação para máquinas reais (pode ser utilizado em VMs também).
+## Temos um script principal, que pode ser utilizado tanto em VMs como em máquinas reais:
+* posinstall.sh - script de pós-instalação para máquinas virtuais.
 
-Em ambos os casos, devemos baixar o arquivo, e executar um comando para dar permissão de execução do script, como segue:
-chmod +x posinstallv1.sh
-ou
-chmod +x requisitos.sh
+## Se necessário trocar o proprietário, executar um comando para dar permissão de execução do script, como segue (troque $USER para o nome do seu usuário):
+* sudo chown $USER posinstall.sh
+
+## Se necessário, adicione a permissão de execução para o script, como segue:
+* sudo chmod +x posinstall.sh
 
 Sempre que possível, vou atualizar estes scripts, adicionando novos comandos e configurações.
 
