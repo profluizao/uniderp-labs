@@ -10,8 +10,8 @@ Os scritps aqui servem para as distribuições da família Debian, como por exem
 * Pop OS 22.04
 * Zorin OS 17
 
-## Temos um script principal, que pode ser utilizado tanto em VMs como em máquinas reais:
-* posinstall.sh - script de pós-instalação para máquinas virtuais.
+## Temos um script principal, que pode ser utilizado em qualquer das distribuições acima:
+* posinstall.sh - script de pós-instalação para uso tanto em VMs como em máquinas reais.
 
 ## Se necessário trocar o proprietário, executar um comando para dar permissão de execução do script, como segue (troque $USER para o nome do seu usuário):
 * sudo chown $USER posinstall.sh
