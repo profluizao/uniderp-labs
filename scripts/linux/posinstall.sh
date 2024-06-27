@@ -12,7 +12,10 @@ function header(){
 	echo "<<< .........Script Pós-instalação......... >>>"
 	echo "."
 	echo "."
-	echo "<<< OBS.: caso queira finalizar, clique [CONTROL + c] para finalizar."
+	echo "### Instalação dos requisitos para o Guest Additions, utilizado em VMs."
+	echo "."
+	echo "."
+	echo "### OBS.: caso queira finalizar, clique [CONTROL + c]"
 	echo "."
 	echo "."
 }
@@ -20,44 +23,53 @@ function header(){
 # Pós instalação
 header
 echo "### Etapa 01 - Pós-instalação"
-echo "."
-echo "."
-echo "."
-sudo apt update
-echo "."
-echo "--- Removendo LibreOffice..."
-echo "."
-sudo apt remove --purge libreoffice*
-echo "."
-echo "--- Limpando cache do APT..."
-echo "."
-sudo apt clean
-echo "."
-echo "--- Limpando pacotes orfãos..."
-echo "."
-sudo apt autoremove
-echo "."
+printf ".\n.\n.\n"
+
 echo "--- Atualizando cache do APT..."
 echo "."
 sudo apt update
+printf ".\n.\n.\n"
+
+echo "--- Removendo LibreOffice (caso tenha sido instalado)..."
 echo "."
+sudo apt remove --purge libreoffice*
+printf ".\n.\n.\n"
+
+echo "--- Limpando cache do APT..."
+echo "."
+sudo apt clean
+printf ".\n.\n.\n"
+
+echo "--- Limpando pacotes orfãos..."
+echo "."
+sudo apt autoremove
+printf ".\n.\n.\n"
+
+echo "--- Atualizando cache do APT..."
+echo "."
+sudo apt update
+printf ".\n.\n.\n"
+
 echo "--- Atualizando pacotes..."
 echo "."
 sudo apt upgrade -y
-echo "."
+printf ".\n.\n.\n"
 pause "### Clique [ENTER] para continuar..."
 
 # Instalação dos requisitos para desenvolvimento
 header
 echo "### Etapa 02 - Instalação dos requisitos para desenvolvimento"
-echo "."
+printf ".\n.\n.\n"
+
 echo "--- Atualizando cache do APT..."
 echo "."
 sudo apt update
-echo "."
-echo "--- Instalando requisitos..."
+printf ".\n.\n.\n"
+
+
+echo "--- Instalando requisitos de compilação necessários..."
 sudo apt install -y build-essential gcc-12 dkms linux-headers-$(uname -r)
-echo "."
+printf ".\n.\n.\n"
 pause "### Clique [ENTER] para continuar..."
 
 # Finalização
